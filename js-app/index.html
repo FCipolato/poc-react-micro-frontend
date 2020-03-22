@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="counter/static/css/react-counter.css">
+</head>
+
+<body>
+
+    <button onclick="semConsentimento()">Sem Consentimento</button>
+    <button onclick="consentimento()">Com Consentimento</button>
+
+    <div id="counter-app"></div>
+
+    <script>
+        function semConsentimento() {
+            localStorage.setItem("@test-Token", "QpwL5tke4Pnpja7X4");
+            window.ReactCounter.mount({ token: localStorage.getItem("@test-Token") });
+        }
+    </script>
+
+    <script>
+        function consentimento() {
+            localStorage.setItem("@test-Token", "1");
+            window.ReactCounter.mount({ token: localStorage.getItem("@test-Token") });
+        }
+    </script>
+
+    <script src="counter/static/js/react-counter.js"></script>
+
+</body>
+
+</html>
